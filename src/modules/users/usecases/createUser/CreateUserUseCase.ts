@@ -1,11 +1,12 @@
+import { ICreateUserDTO } from '@modules/users/dtos/ICreateUserDTO';
+import { User } from '@modules/users/entities/User';
+import { IUsersRepository } from '@modules/users/repositories/IUsersRepository';
 import { inject, injectable } from 'tsyringe';
 
-import { ICreateUserDTO } from '../dtos/ICreateUserDTO';
-import { User } from '../entities/User';
-import { IUsersRepository } from '../repositories/IUsersRepository';
+import { AppError } from '@shared/errors/AppError';
 
 @injectable()
-export class CreateUserService {
+export class CreateUserUseCase {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
@@ -15,7 +16,7 @@ export class CreateUserService {
     const userExists = await this.usersRepository.findOne(email);
 
     if (userExists) {
-      throw new Error('User already exists');
+      throw new AppError('User already exists');
     }
 
     const user = await this.usersRepository.create({ name, email, admin });
