@@ -17,6 +17,7 @@ describe('CreateUserUseCase', () => {
     const newUser = {
       name: 'Test',
       email: 'test@test.com.br',
+      password: '123456',
     };
 
     const user = await createUserUseCase.execute(newUser);
@@ -30,6 +31,7 @@ describe('CreateUserUseCase', () => {
     const newUser = {
       name: 'Test',
       email: 'test@test.com.br',
+      password: '123456',
     };
 
     await createUserUseCase.execute(newUser);

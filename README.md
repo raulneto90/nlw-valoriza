@@ -47,6 +47,7 @@ $ yarn dev
 $ npm run dev
 
 ```
+
 :exclamation: É necessário adaptar o arquivo ormconfig.json para o seu ambiente.
 
 ---

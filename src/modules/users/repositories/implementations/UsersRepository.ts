@@ -19,7 +19,11 @@ export class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  findOne(email: string): Promise<User> {
+  async findOne(email: string): Promise<User> {
     return this.repository.findOne({ email });
+  }
+
+  async findById(id: string): Promise<User> {
+    return this.repository.findOne(id);
   }
 }

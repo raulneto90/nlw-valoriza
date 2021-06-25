@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for tags/usecases/createTag/CreateTagUseCase.ts</title>
+    <title>Code coverage report for users/usecases/authenticateUser/AuthenticateUserUseCase.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">tags/usecases/createTag</a> CreateTagUseCase.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">users/usecases/authenticateUser</a> AuthenticateUserUseCase.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>37/37</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>26/26</span>
+                <span class='fraction'>37/37</span>
             </div>
         
             
@@ -83,7 +83,18 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -91,48 +102,70 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ICreateTagDTO } from '@modules/dtos/ICreateTagDTO';
-import { Tag } from '@modules/tags/entities/Tag';
-import { ITagsRepository } from '@modules/tags/repositories/ITagsRepository';
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import authConfig from '@config/auth';
+import { IAuthenticateUserDTO } from '@modules/users/dtos/IAuthenticateUserDTO';
+import { IAuthenticateUserResponseDTO } from '@modules/users/dtos/IAuthenticateUserResponseDTO';
+import { IUsersRepository } from '@modules/users/repositories/IUsersRepository';
+import { compare } from 'bcrypt';
+import { sign } from 'jsonwebtoken';
 import { inject, injectable } from 'tsyringe';
 &nbsp;
 import { AppError } from '@shared/errors/AppError';
 &nbsp;
 @injectable()
-export class CreateTagUseCase {
+export class AuthenticateUserUseCase {
   constructor(
-    @inject('TagsRepository')
-    private tagsRepository: ITagsRepository,
+    @inject('UsersRepository')
+    private usersRepository: IUsersRepository,
   ) {}
 &nbsp;
-  async execute({ name }: ICreateTagDTO): Promise&lt;Tag&gt; {
-    const tagExists = await this.tagsRepository.findOne(name);
+  async execute({
+    email,
+    password,
+  }: IAuthenticateUserDTO): Promise&lt;IAuthenticateUserResponseDTO&gt; {
+    const user = await this.usersRepository.findOne(email);
 &nbsp;
-    if (tagExists) {
-      throw new AppError('Tag already exists!');
-    }
+    if (!user) throw new AppError('Email/password does not match!');
 &nbsp;
-    const tag = await this.tagsRepository.create({ name });
+    const passwordMatch = await compare(password, user.password);
 &nbsp;
-    return tag;
+    if (!passwordMatch) throw new AppError('Email/password does not match!');
+&nbsp;
+    const token = sign({ email: user.email }, authConfig.secret, {
+      subject: user.id,
+      expiresIn: authConfig.expiresIn,
+    });
+&nbsp;
+    return { token };
   }
 }
 &nbsp;</pre></td></tr></table></pre>

@@ -1,3 +1,5 @@
+import { IComplimentsRepository } from '@modules/compliments/repositories/IComplimentsRepository';
+import { ComplimentsRepository } from '@modules/compliments/repositories/implementations/ComplimentsRepository';
 import { TagsRepository } from '@modules/tags/repositories/implementations/TagsRepository';
 import { ITagsRepository } from '@modules/tags/repositories/ITagsRepository';
 import { UsersRepository } from '@modules/users/repositories/implementations/UsersRepository';
@@ -10,3 +12,8 @@ container.registerSingleton<IUsersRepository>(
 );
 
 container.registerSingleton<ITagsRepository>('TagsRepository', TagsRepository);
+
+container.registerSingleton<IComplimentsRepository>(
+  'ComplimentsRepository',
+  ComplimentsRepository,
+);

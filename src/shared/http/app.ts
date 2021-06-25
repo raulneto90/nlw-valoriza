@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'express-async-errors';
 import '@shared/container';
-import '@shared/infra/database';
+import '@shared/database';
 import express, { NextFunction, Request, Response } from 'express';
 
 import { AppError } from '@shared/errors/AppError';

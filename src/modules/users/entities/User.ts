@@ -1,3 +1,4 @@
+import { classToClass, Exclude } from 'class-transformer';
 import {
   Column,
   CreateDateColumn,
@@ -8,7 +9,7 @@ import {
 import { v4 as uuid } from 'uuid';
 
 @Entity('users')
-export class User {
+class User {
   @PrimaryColumn()
   readonly id: string;
 
@@ -20,6 +21,10 @@ export class User {
 
   @Column({ type: 'boolean' })
   admin: boolean;
+
+  @Column()
+  @Exclude()
+  password: string;
 
   @CreateDateColumn()
   created_at: Date;
@@ -33,3 +38,5 @@ export class User {
     }
   }
 }
+
+export { User };
