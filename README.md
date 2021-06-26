@@ -9,8 +9,12 @@ Este projeto foi construido sobre o conceito de DDD (Domain Driven Design), util
 Neste projeto é possível:
 
 - [X] Cadastrar usuários
+- [X] Listar usuários cadastrados
 - [X] Cadastrar tags que serão utilizadas para elogiar os usuários
+- [X] Listar tags cadastradas
 - [X] Cadastrar elogios para os usuários
+- [X] Listar os elogios enviados por um usuário
+- [X] Listar os elogios recebidos de um usuário
 
 ## :computer: Tecnologias utilizadas
 
@@ -19,6 +23,11 @@ Neste projeto é possível:
 - [X] Typeorm
 - [X] PostgreSQL
 - [X] uuid
+- [X] Jest
+- [X] class-transformer
+- [X] docker-compose
+- [X] Eslint
+- [X] Prettier
 
 ## :floppy_disk: Como baixar e utilizar o projeto
 
