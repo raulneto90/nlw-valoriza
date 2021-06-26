@@ -19,4 +19,16 @@ export class FakeComplimentsRepository implements IComplimentsRepository {
 
     return compliment;
   }
+
+  async findByReceiver(userID: string): Promise<Compliment[]> {
+    return this.compliments.filter(
+      compliment => compliment.user_receiver === userID,
+    );
+  }
+
+  async findBySender(userID: string): Promise<Compliment[]> {
+    return this.compliments.filter(
+      compliment => compliment.user_sender === userID,
+    );
+  }
 }

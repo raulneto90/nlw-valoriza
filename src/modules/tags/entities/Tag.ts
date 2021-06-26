@@ -1,3 +1,4 @@
+import { Exclude, Expose } from 'class-transformer';
 import {
   Column,
   CreateDateColumn,
@@ -14,6 +15,11 @@ export class Tag {
 
   @Column()
   name: string;
+
+  @Expose({ name: 'tag' })
+  tag(): string {
+    return `#${this.name}`;
+  }
 
   @CreateDateColumn()
   created_at: Date;

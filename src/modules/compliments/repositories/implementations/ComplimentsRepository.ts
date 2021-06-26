@@ -18,4 +18,18 @@ export class ComplimentsRepository implements IComplimentsRepository {
 
     return compliment;
   }
+
+  async findBySender(userID: string): Promise<Compliment[]> {
+    return this.repository.find({
+      where: { user_receiver: userID },
+      relations: ['userSender', 'tag'],
+    });
+  }
+
+  async findByReceiver(userID: string): Promise<Compliment[]> {
+    return this.repository.find({
+      where: { user_receiver: userID },
+      relations: ['userSender', 'tag'],
+    });
+  }
 }

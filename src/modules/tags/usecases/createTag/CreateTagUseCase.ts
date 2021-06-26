@@ -1,4 +1,4 @@
-import { ICreateTagDTO } from '@modules/dtos/ICreateTagDTO';
+import { ICreateTagDTO } from '@modules/tags/dtos/ICreateTagDTO';
 import { Tag } from '@modules/tags/entities/Tag';
 import { ITagsRepository } from '@modules/tags/repositories/ITagsRepository';
 import { inject, injectable } from 'tsyringe';

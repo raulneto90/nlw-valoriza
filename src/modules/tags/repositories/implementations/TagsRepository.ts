@@ -1,4 +1,4 @@
-import { ICreateTagDTO } from '@modules/dtos/ICreateTagDTO';
+import { ICreateTagDTO } from '@modules/tags/dtos/ICreateTagDTO';
 import { Tag } from '@modules/tags/entities/Tag';
 import { getRepository, Repository } from 'typeorm';
 
@@ -21,5 +21,9 @@ export class TagsRepository implements ITagsRepository {
 
   async findOne(name: string): Promise<Tag> {
     return this.repository.findOne({ name });
+  }
+
+  async findAll(): Promise<Tag[]> {
+    return this.repository.find();
   }
 }

@@ -5,9 +5,7 @@ export function ensureUserAdmin(
   response: Response,
   next: NextFunction,
 ): Response | void {
-  const admin = true;
-
-  if (admin) return next();
+  if (request.user.admin) return next();
 
   return response.status(401).json({ message: 'Unauthorized' });
 }

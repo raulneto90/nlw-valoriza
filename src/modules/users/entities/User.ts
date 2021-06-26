@@ -20,6 +20,7 @@ class User {
   email: string;
 
   @Column({ type: 'boolean' })
+  @Exclude()
   admin: boolean;
 
   @Column()
